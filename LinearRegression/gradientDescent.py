@@ -1,8 +1,15 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
+import os
+from dotenv import find_dotenv,load_dotenv
 
-data = pd.read_csv("C:\\Users\\raghu\\Documents\\MLfromScratch\\datasets\\LengthAndPrice.csv")
+dotenv_path = find_dotenv()
+load_dotenv(dotenv_path)
+
+pathToLengthAndPriceDS = os.getenv("pathToLengthAndPriceDS")
+
+data = pd.read_csv(pathToLengthAndPriceDS)
 
 
 def cost_function(theta0,theta1,points):
