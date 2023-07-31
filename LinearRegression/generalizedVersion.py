@@ -63,6 +63,6 @@ for i in range(epochs):
 print(thetas)
 
 plt.scatter(data.length,data.price,color="black")
-plt.plot(list(range(10,150)),[thetas[0]+(x*thetas[1]) for x in range(10,150)],color="red")
+plt.plot(list(range(10,150)),[thetas[0]+(x*thetas[1]) for x in range(10,150)],color="red") #here the code is not generalized(it works only when it has 1 input feature)
 plt.show()
 
