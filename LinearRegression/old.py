@@ -6,7 +6,7 @@ from dotenv import find_dotenv,load_dotenv
 dotenv_path = find_dotenv()
 load_dotenv(dotenv_path)
 
-pathToLengthAndPriceDS = os.getenv("pathToLengthAndPriceDS")
+pathToLengthAndPriceDS = os.getenv("pathToLengthAndPriceV2DS")
 
 data = pd.read_csv(pathToLengthAndPriceDS)
 
@@ -37,7 +37,7 @@ def gradient_descent(theta0,theta1,points):
 theta0 = 0
 theta1 = 0
 
-epochs = 20000
+epochs = 100000
 for i in range(epochs):
     theta0,theta1 = gradient_descent(theta0,theta1,data)
 

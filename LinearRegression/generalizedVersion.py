@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 dotenv_file = find_dotenv()
 load_dotenv(dotenv_file)
 
-pathtoDS = os.getenv("pathToLengthAndPriceDS")
+pathtoDS = os.getenv("pathToLengthAndPriceV2DS")
 
 data = pd.read_csv(pathtoDS)
 
@@ -56,7 +56,7 @@ def gradientDescent(thetas,learning_factors,data):
 
 thetas = [0,0]
 learning_factors = [0.00000001,0.00001]
-epochs = 100
+epochs = 100000
 for i in range(epochs):
     thetas = gradientDescent(thetas,learning_factors,data)
 
